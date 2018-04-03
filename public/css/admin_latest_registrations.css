@@ -1,0 +1,141 @@
+div.table-title {
+    display: block;
+    /*margin: auto;*/
+   /* max-width: 600px;*/
+    padding:5px;
+    width: 100%;
+}
+
+.table-title h3 {
+   /* font-size: 30px;*/
+    font-weight: bold;
+    font-style:normal;
+
+}
+
+
+/*** Table Styles **/
+
+.table-fill {
+    background: white;
+    border-radius:3px;
+    border-collapse: collapse;
+    padding:7px;
+    width: 100%;
+    /*box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);*/
+    animation: float 5s infinite;
+}
+
+th {
+    color:#3e8f3e;
+    border-bottom:1px solid #F1F1F1;
+    border-top:1px solid #F5F5F1;
+    border-left:1px solid #F5F5F1;
+    border-right: 1px solid #F5F5F1;
+    font-size:20px;
+    font-weight: 100;
+    padding:15px;
+    text-align:left;
+    vertical-align:middle;
+}
+
+th:first-child {
+    border-top-left-radius:3px;
+}
+
+th:last-child {
+    border-top-right-radius:3px;
+
+}
+
+tr {
+    border-top: 1px solid #3e8f3e;
+    border-bottom: 1px solid #3e8f3e;
+    color:#212121;
+    height:50px;
+    font-size:18px;
+    font-weight:normal;
+    text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+tr:hover td {
+    /*grey*/
+    color:#3e8f3e; /*green*/
+    font-weight:500;
+    font-size:18px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+tr:first-child {
+    border-top:none;
+}
+
+tr:last-child {
+    border-bottom:none;
+}
+
+tr:nth-child(odd) td {
+    background:#F1F1F1;;
+}
+
+tr:nth-child(odd):hover td {
+    color:#3e8f3e;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius:3px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius:3px;
+}
+
+td {
+
+    padding:5px;
+    text-align:left;
+    vertical-align:middle;
+    font-weight:300;
+    font-size:18px;
+    max-width:200px;
+
+}
+
+td a {
+    color:black;
+    margin-left:8px;
+}
+
+td a:hover {
+    color:#3e8f3e;
+}
+td:last-child {
+    border-right: 0px;
+}
+
+th.text-left {
+    text-align: left;
+
+}
+
+th.text-center {
+    text-align: center;
+}
+
+th.text-right {
+    text-align: right;
+}
+
+td.text-left {
+    text-align: left;
+   word-wrap:break-word;
+}
+
+td.text-center {
+    text-align: center;
+}
+
+td.text-right {
+    text-align: right;
+}

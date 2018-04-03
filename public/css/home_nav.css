@@ -1,0 +1,93 @@
+.s{
+    background-color: #000;
+}
+.s>li>a{
+
+    color: #fff;
+    text-transform: uppercase;
+    transition: all .7s ease 0s;
+    -webkit-transition: all .7s ease 0s;
+    -moz-transition: all .7s ease 0s;
+    -o-transition: all .7s ease 0s;
+    -ms-transition: all .7s ease 0s;
+    padding: 14px 15px;
+}
+.s>li>a:hover{
+    color: #85cb65;
+}
+.our-style{
+    background:  #000 !important;
+    position: fixed;
+    width: 100%;
+    min-height: 70px;
+
+}
+.our-s{
+    padding-top: 10px;
+    padding-right: 10px;
+
+}
+
+.header-backup{
+    width: 20px;
+    height: 70px;
+    background: transparent;
+    margin:auto;
+}
+
+ul.nav{
+    margin: 0;
+    padding: 0;
+}
+#btn-h:hover {
+    background-color: #85cb65;
+}
+.navbar-inverse .navbar-nav>li>a {
+    margin-right:10px;
+    color: #fff;
+    transition: all .7s ease 0s;
+    -webkit-transition: all .7s ease 0s;
+    -moz-transition: all .7s ease 0s;
+    -o-transition: all .7s ease 0s;
+    -ms-transition: all .7s ease 0s;
+    padding: 14px 15px;
+    font-weight: bold;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+    color: #85cb65;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+
+    background-color: #000;
+}
+.navbar-inverse .navbar-toggle {
+    border-color: #fff;
+    margin-top: 4px;
+}
+
+
+.footer{
+    background-color: #000;
+}
+.footer-para{
+    margin: 0;
+    padding: 0;
+}
+.footer p{
+    font-size: 12px;
+    color: #e6e6e6;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 25px 0;
+
+}
+.footer a i.fa{
+    font-size: 24px;
+    color: #e6e6e6;
+    padding: 22px 10px;
+}
+.footer a i.fa:hover{
+    color:  #85cb65;
+}
+

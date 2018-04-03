@@ -1,0 +1,60 @@
+
+body{
+
+  background-color: #f1f1f1;
+
+}
+.row{
+
+}
+.noresults {
+  margin-top:70px;
+  text-align:center;
+  margin-bottom:760px;
+}
+.m{
+  margin-top:30px;
+
+}
+.listitem{
+  background-color: white;
+  border-style: solid;
+border-color: rgb(230,230,230);
+border-width: 1px;
+border-bottom-width: 5px;
+
+padding: 50px;
+font-family: "New Times Roman", Times, Serif;
+margin-top: 10px;
+ font-size: 15px;
+
+}
+
+.listitem .h1{
+  font-size: 20px;
+}
+.listitem .available{
+  color: green;
+  font-size: 13px;
+}
+.listitem .obj{
+  font-size: 20px;
+}
+.listitem objdes{
+	word-wrap:break-word;
+	}
+.listitem .hours{
+  text-align: left;
+  display: inline-block;
+}
+.listitem .price{
+  display: inline-block;
+  margin-left: 50px;
+}
+.butbut{
+display: inline-block; float:right;
+margin: 10px;
+}
+.objdes{
+  overflow:hidden;
+}

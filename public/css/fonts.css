@@ -1,0 +1,22 @@
+@font-face {
+	font-family: 'Artifika';
+	src: url('fonts/Artifika-Regular.ttf');
+}
+
+.artifika {
+	font-family: 'Artifika';
+}
+
+@font-face {
+	font-family: "Play";
+	src: url('fonts/Play-Regular.ttf');
+}
+
+.play {
+	font-family: 'Play';
+}
+
+@font-face {
+	font-family: 'Comic';
+	src: url('fonts/ComicRelief.ttf');
+}

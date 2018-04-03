@@ -1,0 +1,172 @@
+body{
+	background-color: #f1f1f1;
+}
+
+.m{
+	margin-top:50px;
+	margin-bottom:125px;
+}
+.form2{
+	/*background-color: rgb(182,182,182);*/
+	background-color: white;
+	border:1px solid grey;
+margin-right: 10px; 
+padding-left:0px;
+
+ 
+}
+
+.buttonn {
+	background-color: #85BB65;
+	border-color: #85BB65;
+	
+margin-bottom: 20px;
+margin-top: 20px;
+
+}
+.required label:after {
+	color: #d00;
+	content: "*";
+	margin-left:4px;
+	top:4px;
+
+}
+
+ .destext{
+	 word-wrap:break-word;
+ 	background-color: white;
+border-color:  rgb(182,182,182);
+border-top: white;
+border-style: solid;
+border-width: 1px;
+padding: 20px;
+ }
+ .form-inline >input {
+box-sizing: border-box;
+ }
+.formcontainer{
+	padding-left: 0px;
+	padding-right: 20px;
+}
+
+
+.coursename{
+	text-align: left;
+	font-size: 30px;
+	margin-left: 20px;
+	text-transform: uppercase;
+}
+
+.butbut{
+	display: block;
+float:left;
+margin: 10px;
+}
+
+.review{
+	background-color: white;
+}
+
+
+@media (min-width: 1200px){
+	.container {
+		width: 980px;
+	}}
+
+
+
+.panel-shadow {
+    box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
+}
+.panel-white {
+    border: 1px solid #dddddd;
+}
+.panel-white  .panel-heading {
+    color: #333;
+    background-color: #fff;
+    border-color: #ddd;
+}
+.panel-white  .panel-footer {
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+.post .post-heading {
+    height: 95px;
+    padding: 20px 15px;
+}
+
+.post .post-heading .meta .title {
+    margin-bottom: 0;
+}
+.post .post-heading .meta .title a {
+    color: black;
+}
+.post .post-heading .meta .title a:hover {
+    color: #aaaaaa;
+}
+.post .post-heading .meta .time {
+    margin-top: 8px;
+    color: #999;
+}
+
+.post .post-description {
+    padding: 15px;
+}
+.post .post-description p {
+    font-size: 14px;
+}
+
+.stars-outer {
+    padding-left:180px;
+    font-size:2em;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+
+    font-family: FontAwesome;
+}
+
+.stars-outer::before {
+    content: "\f006 \f006 \f006 \f006 \f006";
+}
+
+.stars-inner {
+    /*margin-left:50px;*/
+    position: absolute;
+    top: 0;
+    left: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+
+.pub{
+    margin-left:250px;
+}
+
+.stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    color: #3dae2f;
+}
+ 
+#rating span {
+  cursor: pointer;
+  border-width: 5px;
+  border-color: black;
+  font-size: 50px;
+  padding: 0 10px;
+  /**color: #fff;**/
+  color:#3dae2f;
+  opacity: .5;
+  display: inline-block;
+}
+ 
+#rating span.hover {
+  color: #3dae2f;
+  opacity: 1;
+  transform: rotateX(0deg);
+  text-shadow: 0 0 30px #ffc;
+}
+
+

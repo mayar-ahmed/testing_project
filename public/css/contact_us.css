@@ -1,0 +1,56 @@
+.alt-background {
+    background: #f7f6f2;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h1, h2 {
+    font-weight: 900;
+    margin: 0 0 30px 0;
+}
+
+.primary-color {
+    color: #85cb65;
+}
+
+.no-margin {
+    margin: 20px;
+}
+
+h2, h3, h4, h5, h6 {
+    line-height: 1.74em;
+}
+
+#map-canvas {
+    height: 500px;
+}
+
+#content{
+    margin-top: 50px;
+}
+img{
+   /* box-shadow: 10px 10px 5px grey;*/
+    border:1px solid #f1f1f1;
+}
+#contact-form{
+    margin-top:20px;
+    margin-bottom:50px;
+}
+#contact-form input{
+    height:40px;
+}
+
+.required label:after {
+    color: #d00;
+    content: "*";
+    margin-left: 4px;
+    top:4px;
+
+}
+

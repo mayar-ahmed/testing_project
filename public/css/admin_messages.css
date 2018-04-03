@@ -1,0 +1,16 @@
+.first{
+	margin-top: 10px;
+
+}
+.firstbtn{
+	display: none;
+	margin-top: 10px;
+}
+
+td{
+	max-width: 300px;
+}
+.btn{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
