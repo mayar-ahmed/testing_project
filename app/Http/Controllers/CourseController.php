@@ -71,10 +71,10 @@ class CourseController extends Controller
              {
                  if (Hash::check($req->reg_code,$reg->code))
                  {
-                     if (Hash::needsRehash($reg->code))
-                     {
-                         $hashed = Hash::make($req->reg_code);
-                     }
+//                     if (Hash::needsRehash($reg->code))
+//                     {
+//                         $hashed = Hash::make($req->reg_code);
+//                     }
                      if(!$reg->confirmed){
                          return redirect()->back()->with('errormsg',"your registration isn't confirmed yet");
                      }

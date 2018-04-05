@@ -65,7 +65,7 @@ class RegistrantController extends Controller
         if($course_reg==null){
 
             $course->registrants()->attach($req->ssn,['date_time'=>$date, 'code'=>$hashed_code]);
-            $msg='Your Registation code is: '.$code.' The fees for the course must be paid within a week from this online registration at the training center or the registration will be deleted.';
+            $msg='Registration Successful'."\n".' Your Registation code is: '.$code.' The fees for the course must be paid within a week from this online registration at the training center or the registration will be deleted.';
         }
         else $msg='you are already registered to this course.';
 
@@ -93,12 +93,12 @@ class RegistrantController extends Controller
             {
                 if (Hash::check($req->code,$reg->code))
                 {
-                    if (Hash::needsRehash($reg->code))
-                    {
-                        $hashed = Hash::make($req->code);
-                        $reg->code=$hashed;
-                        $reg->save();
-                    }
+//                    if (Hash::needsRehash($reg->code))
+//                    {
+//                        $hashed = Hash::make($req->code);
+//                        $reg->code=$hashed;
+//                        $reg->save();
+//                    }
                     if(!$reg->confirmed){
                         return redirect()->back()->with('errormsg',"your registration isn't confirmed yet to add a review");
                     }
