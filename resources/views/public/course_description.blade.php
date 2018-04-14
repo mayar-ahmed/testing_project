@@ -209,10 +209,12 @@
                   <span>★</span>
                 </div>
 
-                <button type="submit" name="submit" class="btn btn-success">Rate</button>
                 <div>
                     <input type="text" id="r" class="form-control" placeholder="Enter your rating " name = "rating" maxlength="5" value="{{old('code')}}" >
                 </div>
+
+                <button type="submit" name="submitrate" class="btn btn-success">Rate</button>
+
             </form>
         </div>
         <div class="col-md-8">

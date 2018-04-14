@@ -30,8 +30,11 @@ class RegistrantController extends Controller
         ]);
 
         $regist=Registrant::where('ssn',$req->ssn)->orwhere('email',$req->email)->first();
+
         if($regist!=null && $regist->ssn!=$req->ssn)
+
             return \redirect()->back()->with('errormsg', 'this email belongs to another ssn');
+
 
         $date = Carbon::now();
         //registration code to be able to download material
@@ -111,7 +114,7 @@ class RegistrantController extends Controller
                     $rev->course_id=$courseID;
 
                     $rev->save();
-                    Session::flash('msg', 'Review Added successfuly');
+                    Session::flash('msg', 'Review Added successfully');
                     return redirect()->back();
                 }
 
@@ -132,7 +135,6 @@ class RegistrantController extends Controller
     public function addRating (Request $req, $courseID){
 
 //        echo $course->ratings->avg('value');
-
 
         $this->validate($req,[
             'code' => 'required',
@@ -176,7 +178,7 @@ class RegistrantController extends Controller
                     $rate->registrant=$reg->registrant_id;
                     $rate->save();
 
-                    Session::flash('msg', 'Rating Added successfuly');
+                    Session::flash('msg', 'Rating Added successfully');
                     return redirect()->back();
                 }
 
