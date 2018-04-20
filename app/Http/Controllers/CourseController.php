@@ -37,20 +37,11 @@ class CourseController extends Controller
 
     }
 
-
-    #get all courses in a category
-    public function CCoursesByCategory($category){
-        $courses=Course::where('category_id',$category)->orderBy('name', 'asc')->get();
-        return view('public.courses',['courses' => $courses, 'category'=>Category::find($category)]);
-    }
-
-
     #get details of a certain course
     public function CCourseDescription($courseID){
         $course=Course::find($courseID);
         return view('public.course_description',compact('course'));
     }
-
 
 
     #download course materials
@@ -71,10 +62,12 @@ class CourseController extends Controller
              {
                  if (Hash::check($req->reg_code,$reg->code))
                  {
+                    /*
                      if (Hash::needsRehash($reg->code))
                      {
                          $hashed = Hash::make($req->reg_code);
                      }
+                     */
                      if(!$reg->confirmed){
                          return redirect()->back()->with('errormsg',"your registration isn't confirmed yet");
                      }
@@ -99,6 +92,13 @@ class CourseController extends Controller
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////
     //admin fucntionality
+
+    #get all courses in a category
+    public function CCoursesByCategory($category){
+        $courses=Course::where('category_id',$category)->orderBy('name', 'asc')->get();
+        return view('public.courses',['courses' => $courses, 'category'=>Category::find($category)]);
+    }
+
 
     public function addCourse(Request $req){
 
