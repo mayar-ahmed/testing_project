@@ -30,8 +30,11 @@ class RegistrantController extends Controller
         ]);
 
         $regist=Registrant::where('ssn',$req->ssn)->orwhere('email',$req->email)->first();
+
         if($regist!=null && $regist->ssn!=$req->ssn)
+
             return \redirect()->back()->with('errormsg', 'this email belongs to another ssn');
+
 
         $date = Carbon::now();
         //registration code to be able to download material
@@ -65,7 +68,7 @@ class RegistrantController extends Controller
         if($course_reg==null){
 
             $course->registrants()->attach($req->ssn,['date_time'=>$date, 'code'=>$hashed_code]);
-            $msg='Your Registation code is: '.$code.' The fees for the course must be paid within a week from this online registration at the training center or the registration will be deleted.';
+            $msg='Registration Successful'."\n".' Your Registation code is: '.$code.' The fees for the course must be paid within a week from this online registration at the training center or the registration will be deleted.';
         }
         else $msg='you are already registered to this course.';
 
@@ -93,12 +96,12 @@ class RegistrantController extends Controller
             {
                 if (Hash::check($req->code,$reg->code))
                 {
-                    if (Hash::needsRehash($reg->code))
-                    {
-                        $hashed = Hash::make($req->code);
-                        $reg->code=$hashed;
-                        $reg->save();
-                    }
+//                    if (Hash::needsRehash($reg->code))
+//                    {
+//                        $hashed = Hash::make($req->code);
+//                        $reg->code=$hashed;
+//                        $reg->save();
+//                    }
                     if(!$reg->confirmed){
                         return redirect()->back()->with('errormsg',"your registration isn't confirmed yet to add a review");
                     }
@@ -111,7 +114,7 @@ class RegistrantController extends Controller
                     $rev->course_id=$courseID;
 
                     $rev->save();
-                    Session::flash('msg', 'Review Added successfuly');
+                    Session::flash('msg', 'Review Added successfully');
                     return redirect()->back();
                 }
 
@@ -132,7 +135,6 @@ class RegistrantController extends Controller
     public function addRating (Request $req, $courseID){
 
 //        echo $course->ratings->avg('value');
-
 
         $this->validate($req,[
             'code' => 'required',
@@ -176,7 +178,7 @@ class RegistrantController extends Controller
                     $rate->registrant=$reg->registrant_id;
                     $rate->save();
 
-                    Session::flash('msg', 'Rating Added successfuly');
+                    Session::flash('msg', 'Rating Added successfully');
                     return redirect()->back();
                 }
 
