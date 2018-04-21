@@ -8,6 +8,9 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class UserTest extends TestCase
 {
+    //old code ignore it
+
+
     use DatabaseTransactions;
     //to reset database state after each test
 
@@ -20,7 +23,7 @@ class UserTest extends TestCase
     {
         //logic and branch coverage on registartion function
 
-        //test one: invalid input formar
+        //test one: invalid input format
         $this->visit('/course_description/2')
             ->type('1234', 'name')
             ->type('mohamed@gmail.com', 'email')
@@ -74,7 +77,7 @@ class UserTest extends TestCase
 
     public function test2(){
 
-        //add setup
+
 
        #text case1 : empty review field
         $this->visit('/course_description/2')

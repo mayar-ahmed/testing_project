@@ -154,12 +154,12 @@ class RegistrantController extends Controller
             {
                 if (Hash::check($req->code,$reg->code))
                 {
-                    if (Hash::needsRehash($reg->code))
-                    {
-                        $hashed = Hash::make($req->code);
-                        $reg->code=$hashed;
-                        $reg->save();
-                    }
+//                    if (Hash::needsRehash($reg->code))
+//                    {
+//                        $hashed = Hash::make($req->code);
+//                        $reg->code=$hashed;
+//                        $reg->save();
+//                    }
                     if(!$reg->confirmed){
                         return redirect()->back()->with('errormsg',"your registration isn't confirmed yet to rate");
                     }
