@@ -4,14 +4,14 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class search_test extends TestCase
+class SearchTes extends TestCase
 {
     /**
      * A basic test example.
      *
      * @return void
      */
-    public function test1_search()
+    public function test1()
     {
     	$this->visit('/')
     		->type('management','name')
@@ -20,10 +20,11 @@ class search_test extends TestCase
              ->see('Management');
     }
     
-    public function test2_search()
+    public function test2()
     {
     	$this->visit('/')
     		 ->press('submit')
+             ->seePageIs('/')
              ->see('The name field is required');
     }
 
