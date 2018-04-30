@@ -10,7 +10,7 @@ class RegistrantBlackBox extends TestCase
 
     //old code ignore it
 
-    
+
     /**
      * logic coverage on registration function
      *
